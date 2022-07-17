@@ -1,18 +1,13 @@
 public class Bus extends Transport {
 
+   private int nowPassengers;
 
-    String busStatus = "";
+    public int getNowPassengers() {
+        return nowPassengers;
+    }
 
-    int nowPassengers;
-
-    int busFee=1000;
-
-
-    @Override
-    public String statusChange(String statusChange){
-
-        return this.busStatus = statusChange;
-
+    public void setNowPassengers(int nowPassengers) {
+        this.nowPassengers = nowPassengers;
     }
 
     @Override
@@ -22,17 +17,13 @@ public class Bus extends Transport {
 
     }
     @Override
-    public int deletePassenger(int deltePassenger){
+    public int leftPassenger(int nowPassengers){
 
-       return this.nowPassengers -= deltePassenger;
-
-    }
-
-    public int countingBusFee(){
-
-        return super.Fee *= nowPassengers;
+       return super.callMaxPassenger() -nowPassengers;
 
     }
+
+
 
 
 
