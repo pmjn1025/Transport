@@ -3,8 +3,9 @@ public class Transport {
     int fuelStatus = 100;
     int velocity =0;
     int chagedVelocity;
-    int nowPassengers;
     int maxPassengers;
+    int Fee;
+
 
     public void startTransport(){
 
@@ -29,11 +30,19 @@ public class Transport {
 
    public int addPassenger(int addPassenger){
 
-
-       return this.nowPassengers += addPassenger;
-
+       return this.addPassenger(addPassenger);
 
    }
+
+   public int deletePassenger(int deltePassenger){
+
+       return this.deletePassenger(deltePassenger);
+
+   }
+
+
+
+
 
 
 
