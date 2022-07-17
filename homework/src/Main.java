@@ -38,6 +38,7 @@ public class Main {
         //    - 속도 = 0
 
         // -->택시 객체 생성 및 기본값 테스트 완료 및 택시시나리오에 있는 몇몇 출력값 확인 완료
+
         Texi texi = new Texi();
         ArrayList<Integer> arrayList = new ArrayList<>();
 
