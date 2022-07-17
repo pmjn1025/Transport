@@ -1,15 +1,34 @@
 public class Bus extends Transport {
 
+   private int nowPassengers;
 
-    String busStatus = "";
+    public int getNowPassengers() {
+        return nowPassengers;
+    }
 
-
+    public void setNowPassengers(int nowPassengers) {
+        this.nowPassengers = nowPassengers;
+    }
 
     @Override
-    public String statusChange(String statusChange){
+    public int addPassenger(int addPassenger){
 
-        return this.busStatus = statusChange;
+        return this.nowPassengers += addPassenger;
 
     }
+    @Override
+    public int leftPassenger(int nowPassengers){
+
+       return super.callMaxPassenger() -nowPassengers;
+
+    }
+
+
+
+
+
+
+
+
 
 }
