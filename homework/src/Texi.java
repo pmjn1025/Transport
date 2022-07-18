@@ -11,7 +11,7 @@ public class Texi extends Transport {
     // 아니면 메인문에 인트배열을 만들어서 저장하자.
     private int totalPrice;
 
-    // 가이드에 버스 클래스에 현재 승객이 있어서 여기서도 상속받지 않고 사용함.
+    // 가이드의 버스 클래스에 현재 승객이 있어서 여기서도 상속받지 않고 사용함.
     private int nowPassengers;
 
 

@@ -113,5 +113,10 @@ public class Transport {
 
     }
 
+    public int fuelChanged(int comsume){
+
+        return this.fuelStatus -= comsume;
+    }
+
 
 }

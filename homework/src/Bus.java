@@ -1,29 +1,27 @@
 public class Bus extends Transport {
 
-    //요소
-    private int nowPassengers;
+    //요소 르탄이가 타기 전의 버스 승객이 있어야 할 것 같아서 추가
+    private int setPassengers;
 
-    private int basic_distance = 1;
+    //요소 르탄이가 탑승한 이후 추가인원이 탑승할 경우 몇명 탑승했는지를 담는 변수 추가
+    private int addPassengers;
 
-    private int basic_price = 3000;
-
-    private int distancePer_price = 1000;
-
-    private int amountPrice;
-    // 12.출력 택시 c 누적요금계산용;
-
-    // 아니면 메인문에 인트배열을 만들어서 저장하자.
-    private int totalPrice;
-
-    // 가이드에 버스 클래스에 현재 승객이 있어서 여기서도 상속받지 않고 사용함.
     private int nowPassengers;
 
 
+    //기능 - 버스는 승객이 탑승하면 택시처럼 뭐 거라 당 요금할증 이런 게 없어서 일단 비워놈
 
+    public int getSetPassengers() {
+        setPassengers = 0;
+        return setPassengers;
+    }
 
-   private int nowPassengers;
+    public int getAddPassengers() {
+        for (i)
+    }
 
     public int getNowPassengers() {
+        nowPassengers = setPassengers + addPassengers;
         return nowPassengers;
     }
 
