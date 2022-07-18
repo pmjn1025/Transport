@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Transport {
     private int trans_Num;
     private int fuelStatus = 100;
@@ -10,6 +11,34 @@ public class Transport {
     // Getter,Setter 시작;
 
     public int getTrans_Num() {
+=======
+import java.util.Random;
+import java.util.Scanner;
+
+public class Transport {
+    private int trans_Num;
+    private int fuelStatus = 100;
+    private int velocity = 0;
+    private int chagedVelocity;
+    private int maxPassengers;
+    private int Fee;
+    private String status = "";
+
+    Scanner scanner = new Scanner(System.in);
+
+
+    boolean  check_Q;
+
+    // Getter,Setter 시작;
+
+    public boolean check_Q() {
+
+        return check_Q;
+    }
+    public int getTrans_Num() {
+        Random setNum = new Random();
+        trans_Num = setNum.nextInt(9999);
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
         return trans_Num;
     }
 
@@ -58,6 +87,10 @@ public class Transport {
     }
 
     public String getStatus() {
+<<<<<<< HEAD
+=======
+        status = "정상 운행(일반)";
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
         return status;
     }
 
@@ -90,6 +123,8 @@ public class Transport {
     }
 
     public String statusChange(String statusChange) {
+<<<<<<< HEAD
+=======
 
         return this.status = statusChange;
 
@@ -106,6 +141,62 @@ public class Transport {
         return this.leftPassenger(deltePassenger);
 
     }
+
+    public int countingBusFee(int nowPassengers){
+
+        return this.Fee *= nowPassengers;
+
+    }
+    public int fuelChanged(int comsume){
+
+        return this.fuelStatus -= comsume;
+    }
+
+    public void test111(int aaa){
+        System.out.println("test111 실행은 됨");
+
+            int q1 = scanner.nextInt();
+
+            if(q1 == 1){
+                // 버스 로직으로 이어짐.
+            }
+            else if (q1 == 2){
+                Texi texi = new Texi();
+                Texi texi2 = new Texi();
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
+
+        return this.status = statusChange;
+
+<<<<<<< HEAD
+    }
+
+    public int addPassenger(int addPassenger) {
+
+        return this.addPassenger(addPassenger);
+=======
+                System.out.println("Q2. 카카오 택시가 잡혔습니다. 항해99 서울역 지점에 팀원을 한명을 데려다 줘야합니다. 어디로 가시겠습니까?\n" +
+                        "1. 선택지 서울역 지점\n" +
+                        "2. 선택지 용산역 지점");
+                System.out.println(texi.getStatus());
+                System.out.println("현재 연료량" + texi.getFuelStatus());
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
+
+    }
+
+<<<<<<< HEAD
+    public int leftPassenger(int deltePassenger) {
+
+        return this.leftPassenger(deltePassenger);
+
+    }
+=======
+            }else{
+                System.out.println("숫자 1과 2중에 선택해 주세요.");
+
+            }
+        System.out.println("test111 안에 로직까지 실행됨");
+        }
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
 
     public int countingBusFee(int nowPassengers){
 

@@ -1,5 +1,6 @@
 public class Bus extends Transport {
 
+<<<<<<< HEAD
     //요소 르탄이가 타기 전의 버스 승객이 있어야 할 것 같아서 추가
     private int setPassengers;
 
@@ -25,6 +26,14 @@ public class Bus extends Transport {
         return nowPassengers;
     }
 
+=======
+   private int nowPassengers;
+
+    public int getNowPassengers() {
+        return nowPassengers;
+    }
+
+>>>>>>> 30528a0973b4a37dd97bde808bd89355966437cc
     public void setNowPassengers(int nowPassengers) {
         this.nowPassengers = nowPassengers;
     }
