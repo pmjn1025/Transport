@@ -18,6 +18,7 @@ public class Texi extends Transport {
     // text getter setter 시작
 
     public String getDeparture() {
+
         return departure;
     }
 
@@ -69,8 +70,9 @@ public class Texi extends Transport {
         return totalPrice;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(int a_distance) {
+        getDistancePer_price();
+        this.totalPrice= getBasic_price()+a_distance* distancePer_price;
     }
 
     public int getNowPassengers() {
