@@ -18,7 +18,7 @@ public class Bus extends Transport {
     }
 
     public int getAddPassengers() {
-        for (i)
+        return addPassengers;
     }
 
     public int getNowPassengers() {
