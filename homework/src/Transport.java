@@ -5,6 +5,8 @@ public class Transport {
     private int chagedVelocity;
     private int maxPassengers;
     private int Fee;
+
+    // 상태
     private String status = "";
 
     // Getter,Setter 시작;
@@ -109,7 +111,18 @@ public class Transport {
 
     public int countingBusFee(int nowPassengers){
 
-        return this.Fee *= nowPassengers;
+        return this.Fee = (nowPassengers*1000);
+
+    }
+
+    public int fuelChanged(int comsume){
+
+        return this.fuelStatus -= comsume;
+    }
+
+    public int AddFuelChange(int input){
+
+        return this.fuelStatus += input;
 
     }
 
