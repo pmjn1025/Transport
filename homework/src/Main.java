@@ -244,20 +244,20 @@ public class Main {
                                                     } else if (q6 == 2) {
                                                         System.out.println("다음 정류장으로 이동합니다.");
                                                         bus.setFee(5000);
-                                                        bus.setNowPassengers(5);
-                                                        System.out.println("탑승 승객 수: " + bus.getNowPassengers() + "  잔여 승객 수: " + (bus.leftPassenger(5))+"  요금: " + (bus.getFee()));
+                                                        //bus.setNowPassengers(5);
+                                                        //System.out.println("탑승 승객 수: " + bus.getNowPassengers() + "  잔여 승객 수: " + (bus.leftPassenger(5))+"  요금: " + (bus.getFee()));
                                                         System.out.println("=========================================================");
 
                                                         System.out.println("Q5. 버스가 항해 3달차 정류장 에 정차하였습니다. 번화가라서 많은 사람이 내립니다.\n" +
-                                                                "내리시겠습니까?\n" +
-                                                                "1. 내린다\n" +
-                                                                "2. 내리지 않는다");
-                                                        System.out.println("----------\n");
+                                                                "내리시겠습니까?\n");
                                                         bus.setFuelStatus(60);
                                                         bus.setNowPassengers(5);
                                                         System.out.println("버스 상태: "+ bus.getStatus()+"  탑승 승객수: " + bus.getNowPassengers()+"  잔여 숭객수: " + bus.leftPassenger(5)+"  연료량: " + bus.getFuelStatus());
                                                         System.out.println("요금: " + bus.getFee());
 //                                                        System.out.println("얼럿 : "+ bus.getAlert_bus());
+                                                        System.out.println(" ");
+                                                        System.out.println("1. 내린다");
+                                                        System.out.println("2. 내리지 않는다.");
 
 
 
@@ -270,9 +270,8 @@ public class Main {
                                                             }
                                                             else if(q7==2){
                                                                 System.out.println("----------\n");
-                                                                System.out.println("다음 정류장으로 이동합니다.");
-                                                                System.out.println("버스 상태: 차고지 행");
-                                                                System.out.println("연료량: " + bus.fuelChanged(115));
+//                                                                System.out.println("다음 정류장으로 이동합니다.");
+//                                                                System.out.println("버스 상태: 차고지 행"+"연료량: " + bus.fuelChanged(115));
                                                                 System.out.println("=========================================================");
 
 
