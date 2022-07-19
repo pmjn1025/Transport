@@ -233,7 +233,7 @@ public class Main {
                                                 System.out.println("1. 내린다");
                                                 System.out.println("2. 내리지 않는다");
 
-                                                //**************************************************************************
+//**************************************************************************
 //**************************************************************************
 //*********************************Q7***************************************
                                                 while (true) {
@@ -243,10 +243,9 @@ public class Main {
 
                                                     } else if (q6 == 2) {
                                                         System.out.println("다음 정류장으로 이동합니다.");
-                                                        System.out.println("탑승 승객 수" + bus.getNowPassengers());
-                                                        System.out.println("잔여 승객 수" + (bus.leftPassenger(25)));
                                                         bus.setFee(5000);
-                                                        System.out.println("요금" + (bus.getFee()));
+                                                        bus.setNowPassengers(5);
+                                                        System.out.println("탑승 승객 수: " + bus.getNowPassengers() + "  잔여 승객 수: " + (bus.leftPassenger(5))+"  요금: " + (bus.getFee()));
                                                         System.out.println("=========================================================");
 
                                                         System.out.println("Q5. 버스가 항해 3달차 정류장 에 정차하였습니다. 번화가라서 많은 사람이 내립니다.\n" +
@@ -254,13 +253,12 @@ public class Main {
                                                                 "1. 내린다\n" +
                                                                 "2. 내리지 않는다");
                                                         System.out.println("----------\n");
-                                                        System.out.println(bus.getStatus());
-                                                        System.out.println("탑승 승객수" + bus.getNowPassengers());
-                                                        System.out.println("잔여 숭객수" + bus.leftPassenger(28));
                                                         bus.setFuelStatus(60);
-                                                        System.out.println(bus.getAlert_bus());
-                                                        System.out.println("연료량" + bus.getFuelStatus());
-                                                        System.out.println("요금" + bus.getFee());
+                                                        bus.setNowPassengers(5);
+                                                        System.out.println("버스 상태: "+ bus.getStatus()+"  탑승 승객수: " + bus.getNowPassengers()+"  잔여 숭객수: " + bus.leftPassenger(5)+"  연료량: " + bus.getFuelStatus());
+                                                        System.out.println("요금: " + bus.getFee());
+//                                                        System.out.println("얼럿 : "+ bus.getAlert_bus());
+
 
 
 
@@ -273,10 +271,8 @@ public class Main {
                                                             else if(q7==2){
                                                                 System.out.println("----------\n");
                                                                 System.out.println("다음 정류장으로 이동합니다.");
-                                                                System.out.println("탑승 승객 수" + bus.getNowPassengers());
-                                                                System.out.println("잔여 승객 수" +(bus.leftPassenger(28)));
-                                                                System.out.println("요금"+(bus.getFee()));
-                                                                System.out.println("연료량" + bus.getFuelStatus());
+                                                                System.out.println("버스 상태: 차고지 행");
+                                                                System.out.println("연료량: " + bus.fuelChanged(115));
                                                                 System.out.println("=========================================================");
 
 
@@ -288,13 +284,11 @@ public class Main {
                                                                         "앞으로도 당신의 앞날에 무한한 영광이 함께하길!\n");
                                                                 System.out.println("----------\n");
                                                                 System.out.println("Congratulation!");
-                                                                bus.statusChange("차고지 행");
-                                                                System.out.println(bus.getStatus());
-                                                                System.out.println("잔여 승객 수" + (bus.leftPassenger(0)));
-                                                                System.out.println("연료량" + bus.getFuelStatus());
+                                                                bus.setFuelStatus(5);
+                                                                System.out.println("버스 상태: 차고지 행" + "  잔여 승객 수: " + (bus.leftPassenger(0))+"  연료량:  " + bus.getFuelStatus());
                                                                 bus.busFuelAlert(5);
-                                                                System.out.println(bus.getAlert_bus());
-
+                                                                bus.statusChange(bus.getAlert_bus());
+                                                                System.out.println("얼럿 : "+ bus.getAlert_bus());
                                                                 System.exit(0);
 
 
@@ -308,8 +302,8 @@ public class Main {
                                                     }
                                                     continue;
                                                 }
-                                            } //이거랑
-                                        }  //이거 이제 테스트
+                                            }
+                                        }
 //**************************************************************************
 
                                     }
