@@ -255,9 +255,6 @@ public class Main {
                                                         bus.setNowPassengers(5);
                                                         System.out.println("버스 상태: "+ bus.getStatus()+"  탑승 승객수: " + bus.getNowPassengers()+"  잔여 숭객수: " + bus.leftPassenger(5)+"  연료량: " + bus.getFuelStatus());
                                                         System.out.println("요금: " + bus.getFee());
-
-
-
 //                                                        System.out.println("얼럿 : "+ bus.getAlert_bus());
                                                         System.out.println(" ");
                                                         System.out.println("1. 내린다");
