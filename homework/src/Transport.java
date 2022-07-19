@@ -1,13 +1,9 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Transport {
     private int trans_Num;
     private int fuelStatus = 100;
     private int velocity = 0;
     private int chagedVelocity;
     private int maxPassengers;
-    private int max2Passengers;
     private int Fee;
 
     // 상태
@@ -51,10 +47,6 @@ public class Transport {
         return maxPassengers;
     }
 
-    public int getmax2Passengers() {
-        return max2Passengers;
-    }
-
     public void setMaxPassengers(int maxPassengers) {
         this.maxPassengers = maxPassengers;
     }
@@ -63,13 +55,11 @@ public class Transport {
         return Fee;
     }
 
-
     public void setFee(int fee) {
         Fee = fee;
     }
 
     public String getStatus() {
-
         return status;
     }
 
@@ -118,7 +108,6 @@ public class Transport {
         return this.leftPassenger(deltePassenger);
 
     }
-
 
     public int countingBusFee(int nowPassengers){
 
