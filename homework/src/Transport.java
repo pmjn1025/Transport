@@ -4,6 +4,8 @@ public class Transport {
     private int velocity = 0;
     private int chagedVelocity;
     private int maxPassengers;
+
+    private int max2Passengers;
     private int Fee;
     private String status = "";
 
@@ -43,6 +45,10 @@ public class Transport {
 
     public int getMaxPassengers() {
         return maxPassengers;
+    }
+
+    public int getmax2Passengers() {
+        return max2Passengers;
     }
 
     public void setMaxPassengers(int maxPassengers) {
