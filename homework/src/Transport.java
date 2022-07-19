@@ -7,26 +7,18 @@ public class Transport {
     private int velocity = 0;
     private int chagedVelocity;
     private int maxPassengers;
+    private int max2Passengers;
     private int Fee;
     private String status = "";
 
-    Scanner scanner = new Scanner(System.in);
-
-
-    boolean  check_Q;
-
     // Getter,Setter 시작;
 
-
     public int getTrans_Num() {
-
         return trans_Num;
     }
 
-    public void setTrans_Num() {
-        Random setNum = new Random();
-        int created_trans_Num = setNum.nextInt(9999);
-        this.trans_Num = created_trans_Num;
+    public void setTrans_Num(int trans_Num) {
+        this.trans_Num = trans_Num;
     }
 
     public int getFuelStatus() {
@@ -57,6 +49,10 @@ public class Transport {
         return maxPassengers;
     }
 
+    public int getmax2Passengers() {
+        return max2Passengers;
+    }
+
     public void setMaxPassengers(int maxPassengers) {
         this.maxPassengers = maxPassengers;
     }
@@ -65,12 +61,13 @@ public class Transport {
         return Fee;
     }
 
+
     public void setFee(int fee) {
         Fee = fee;
     }
 
     public String getStatus() {
-        status = "정상 운행(일반)";
+
         return status;
     }
 
@@ -120,45 +117,12 @@ public class Transport {
 
     }
 
+
     public int countingBusFee(int nowPassengers){
 
         return this.Fee *= nowPassengers;
 
     }
-    public int fuelChanged(int comsume){
-
-        return this.fuelStatus -= comsume;
-    }
-
-//    public void test111(int aaa){
-//        System.out.println("test111 실행은 됨");
-//
-//            int aaa = scanner.nextInt();
-//
-//            if(q1 == 1){
-//                // 버스 로직으로 이어짐.
-//            }
-//            else if (q1 == 2){
-//                Texi texi = new Texi();
-//                Texi texi2 = new Texi();
-//
-//
-//                System.out.println("Q2. 카카오 택시가 잡혔습니다. 항해99 서울역 지점에 팀원을 한명을 데려다 줘야합니다. 어디로 가시겠습니까?\n" +
-//                        "1. 선택지 서울역 지점\n" +
-//                        "2. 선택지 용산역 지점");
-//                System.out.println(texi.getStatus());
-//                System.out.println("현재 연료량" + texi.getFuelStatus());
-//
-//
-//            }else{
-//                System.out.println("숫자 1과 2중에 선택해 주세요.");
-//
-//            }
-//        System.out.println("test111 안에 로직까지 실행됨");
-//        }
-
-
-
 
 
 }
