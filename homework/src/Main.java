@@ -55,12 +55,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
+
         while (true) {
             int q1 = scanner.nextInt();
 
             if (q1 == 1) {
                 // 버스 로직으로 이어짐.
             } else if (q1 == 2) {
+
+
                 // 택시를 선택했을 때 동작하는 기능
                 // 택시 객체 생성
                 // 택시 넘버 4자리 랜덤 생성
@@ -68,6 +71,7 @@ public class Main {
                 System.out.println("===========================================");
                 Texi texi = new Texi();
                 Texi texi2 = new Texi();
+
                 texi.setTrans_Num(2);
                 texi2.setTrans_Num(1);
                 texi.setTotal(5000);
@@ -82,15 +86,18 @@ public class Main {
                 System.out.println("현재 연료량" + texi.getFuelStatus());
 
 
+
                 System.out.println("Q2. 카카오 택시가 잡혔습니다. 항해99 서울역 지점에 팀원을 한명을 데려다 줘야합니다. 어디로 가시겠습니까?\n" +
                         "1. 선택지 서울역 지점\n" +
                         "2. 선택지 용산역 지점");
+
 
 
                 while (true) {
                     int q2 = scanner.nextInt();
 
                     if (q2 == 1) {
+
                         texi.setDeparture("서울역");
                         texi.setDeparture_distance(2);
                         texi.setNowPassengers(2);
@@ -120,18 +127,21 @@ public class Main {
                         while (true) {
                             int q3 = scanner.nextInt();
                             if (q3 == 1 | q3 == 2 | q3 == 3) {
+
                                 System.out.println("결제 완료");
                                 System.out.println("===========================================");
                                 System.out.println("서울역 지점 다른  팀원들을 태우고 구로디지털 단지 지점 에 가기위해\n" +
                                         "탑승하려고 하니 5명이나 되네요?");
                                 System.out.println("택시 상태 : " + texi.getStatus());
                                 System.out.println("택시 연료 : " + texi.getFuelStatus());
+
                                 System.out.println("ㅡㅡ현재 승객 상태 인원초과");
                                 //알림창 구현은 콘솔창에 프린트 하면 되는걸로 취급
 
                                 System.out.println("\n" +
                                         "1. 5명중 팀원 2명만 같이 간다.\n" +
                                         "2. 내리고 같이 버스를 탄다.");
+
                                 while (true) {
                                     int q4 = scanner.nextInt();
                                     if (q4 == 1) {
@@ -205,6 +215,7 @@ public class Main {
 
 
 
+
                                                         //System.out.println("누적요금 : " + total_list+totals);
 
 
@@ -227,6 +238,7 @@ public class Main {
 
                                                     }
                                                 }
+
 
 
 //                                                    texi.setTrans_Num(1);

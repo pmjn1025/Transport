@@ -2,7 +2,6 @@ public class Texi extends Transport {
 
     private String departure;
     private int departure_distance;
-
     private int departure_mindistance;
     private int basic_distance = 1;
     private int basic_price = 3000;
@@ -18,6 +17,7 @@ public class Texi extends Transport {
     }
 
     private int basic_maxprice = 10000;
+
     private int distancePer_price = 1000;
 
     private int amountPrice;
@@ -37,6 +37,7 @@ public class Texi extends Transport {
         this.total = total;
     }
 
+
     // 가이드에 버스 클래스에 현재 승객이 있어서 여기서도 상속받지 않고 사용함.
     private int nowPassengers;
 
@@ -44,6 +45,7 @@ public class Texi extends Transport {
     // text getter setter 시작
 
     public String getDeparture() {
+
         return departure;
     }
 
@@ -55,11 +57,10 @@ public class Texi extends Transport {
         return departure_distance;
     }
 
+
     public int getDeparture_mindistance() {
         return departure_mindistance;
     }
-
-
 
 
 
@@ -79,9 +80,11 @@ public class Texi extends Transport {
     public int getBasic_price() {
         return basic_price;
     }
+
     public int  getBasic_maxprice() {
         return basic_maxprice;
     }
+
 
 
     public void setBasic_price(int basic_price) {
@@ -108,8 +111,10 @@ public class Texi extends Transport {
         return totalPrice;
     }
 
+
     public void setTotalPrice(int totalPrice) {
         this.totalPrice = totalPrice;
+
     }
 
     public int getNowPassengers() {
