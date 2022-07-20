@@ -126,7 +126,7 @@ public class Main {
 
                         bus.busFuelAlert(changedFuel_q2);
                         String busStats_q2 = bus.statusChange("운행중");
-                        String busAlert_q2 = bus.getAlert_bus();
+                        String busAlert_q2 = bus.getAlertBus();
 
                         System.out.println("삑 카드를 찍고 버스가 출발합니다.\n" +
                                 "당신은 무엇을 하시겠습니까? \n");
@@ -220,7 +220,7 @@ public class Main {
                                                 bus.busPassAlert(now_pass_q5);
 
                                                 int leftpass_q5 = bus.leftPassenger(now_pass_q5);
-                                                String bus_alert = bus.getAlert_bus();
+                                                String bus_alert = bus.getAlertBus();
 
 
                                                 System.out.println("버스가 항해 2달차 에 정차하였습니다. 번화가라서 많은 사람이 버스에 탑니다.");
@@ -285,8 +285,8 @@ public class Main {
                                                                 bus.setFuelStatus(5);
                                                                 System.out.println("버스 상태: 차고지 행" + "  잔여 승객 수: " + (bus.leftPassenger(0))+"  연료량:  " + bus.getFuelStatus());
                                                                 bus.busFuelAlert(5);
-                                                                bus.statusChange(bus.getAlert_bus());
-                                                                System.out.println("얼럿 : "+ bus.getAlert_bus());
+                                                                bus.statusChange(bus.getAlertBus());
+                                                                System.out.println("얼럿 : "+ bus.getAlertBus());
                                                                 System.exit(0);
 
 
@@ -334,7 +334,7 @@ public class Main {
 
                         System.out.println("항훼 99로가는 버스였습니다. 르탄이는 결국 행방불명되었습니다.");
                         // 자바 메서드 완전종료하는 메서드
-                        System.exit(0);
+                        System.out.println("다른 번호를 입력해 주세요!ㅎ");
 
                     } else {
 
@@ -377,24 +377,24 @@ public class Main {
 
 
                 while (true) {
-                    int q2_taxi = scanner.nextInt();
+                    int q2Taxi = scanner.nextInt();
 
-                    if (q2_taxi == 1) {
+                    if (q2Taxi == 1) {
 
                         texi.setDeparture("서울역");
-                        texi.setDeparture_distance(2);
+                        texi.setDepartureDistance(2);
                         texi.setNowPassengers(2);
                         texi.setMaxPassengers(5);
-                        texi.setDistancePer_price(1000);
-                        texi.setTotalPrice(texi.getDeparture_distance());
+                        texi.setDistancePerPrice(1000);
+                        texi.setTotalPrice(texi.getDepartureDistance());
                         texi.setStatus("운행중");
 
 
                         System.out.println("탑승 승객 수 : " + texi.getNowPassengers());
                         System.out.println("잔여 승객 수 : " + (texi.getMaxPassengers() - texi.getNowPassengers()));
-                        System.out.println("기본 요금 : " + texi.getBasic_price());
+                        System.out.println("기본 요금 : " + texi.getBasicPrice());
                         System.out.println("목적지 : " + texi.getDeparture());
-                        System.out.println("목적지 까지 거리 : " + texi.getDeparture_distance());
+                        System.out.println("목적지 까지 거리 : " + texi.getDepartureDistance());
                         System.out.println("목적지 까지 요금 : " + texi.getTotalPrice());
                         System.out.println("택시 상태 : " + texi.getStatus());
                         System.out.println("택시 연료 상태 : " + texi.getFuelStatus());
@@ -408,8 +408,8 @@ public class Main {
                                 "2. 카드로 요금을 지불해 드린다.\n" +
                                 "3.자동 결제인데요?");
                         while (true) {
-                            int q3_taxi = scanner.nextInt();
-                            if (q3_taxi == 1 | q3_taxi == 2 | q3_taxi == 3) {
+                            int q3Taxi = scanner.nextInt();
+                            if (q3Taxi == 1 | q3Taxi == 2 | q3Taxi == 3) {
 
                                 System.out.println("결제 완료");
                                 System.out.println("===========================================");
@@ -426,13 +426,13 @@ public class Main {
                                         "2. 내리고 같이 버스를 탄다.");
 
                                 while (true) {
-                                    int q4_taxi = scanner.nextInt();
-                                    if (q4_taxi == 1) {
+                                    int q4Taxi = scanner.nextInt();
+                                    if (q4Taxi == 1) {
                                         System.out.println("===========================================");
                                         texi.setNowPassengers(3);
                                         texi.setDeparture("구로디지털 단지역");
-                                        texi.setDeparture_distance(12);
-                                        texi.setTotalPrice(texi.getDeparture_distance());
+                                        texi.setDepartureDistance(12);
+                                        texi.setTotalPrice(texi.getDepartureDistance());
                                         texi.setFuelStatus(-20);
 
                                         System.out.println("어쩔 수 없이 나포함 3명만 택시를 타고 나머지 팀원은 버스 를\n" +
@@ -441,9 +441,9 @@ public class Main {
                                                 "아니면 택시를 타고 가시겠습니까?");
                                         System.out.println("탑승 승객 수 : " + texi.getNowPassengers());
                                         System.out.println("잔여 승객 수 : " + 1);
-                                        System.out.println("기본 요금 : " + texi.getBasic_price());
+                                        System.out.println("기본 요금 : " + texi.getBasicPrice());
                                         System.out.println("목적지 : " + texi.getDeparture());
-                                        System.out.println("목적지 까지 거리 : " + texi.getDeparture_distance());
+                                        System.out.println("목적지 까지 거리 : " + texi.getDepartureDistance());
                                         System.out.println("현재 요금 : " + + arrayList.get(1));
                                         System.out.println("목적지 까지 요금 : " + texi.getTotalPrice());
                                         System.out.println("현재 연료량 : " + texi.getFuelStatus());
@@ -452,9 +452,9 @@ public class Main {
                                                 "2. 3명만 택시를 타고 간다.");
 
                                         while (true) {
-                                            int q5_taxi = scanner.nextInt();
+                                            int q5Taxi = scanner.nextInt();
 
-                                            if (q5_taxi == 1 | q5_taxi ==2) {
+                                            if (q5Taxi == 1 | q5Taxi ==2) {
                                                 System.out.println("먼저가서 팀원들과 과제하고 있죠! ^^ \n" );
                                                 texi.setTrans_Num(1);
                                                 texi2.setTrans_Num(2);
@@ -465,10 +465,10 @@ public class Main {
                                                     "1. 50\n"+ "2. 100\n");
 
                                             while (true) {
-                                                int q6_taxi = scanner.nextInt();
-                                                if ( 1 <= q6_taxi && q6_taxi <= 100 ) {
+                                                int q6Taxi = scanner.nextInt();
+                                                if ( 1 <= q6Taxi && q6Taxi <= 100 ) {
 
-                                                    texi.setSpeed(q6_taxi);
+                                                    texi.setSpeed(q6Taxi);
                                                     System.out.println(texi.getSpeed());
 
 
@@ -484,8 +484,8 @@ public class Main {
 
                                                 }
                                                 while(true){
-                                                    int q7_taxi = scanner.nextInt();
-                                                    if ( q7_taxi == 1 | q7_taxi == 2 | q7_taxi == 3){
+                                                    int q7Taxi = scanner.nextInt();
+                                                    if ( q7Taxi == 1 | q7Taxi == 2 | q7Taxi == 3){
                                                         System.out.println("===========================================");
 
                                                         System.out.println("항해99 구로디지털 단지 역에 도착하였습니다. " +
@@ -543,7 +543,7 @@ public class Main {
                                 }
                             }
                         }
-                    }else if(q2_taxi == 2){
+                    }else if(q2Taxi == 2){
 
                         System.out.println("옳바른 경로가 아닙니다.");
 

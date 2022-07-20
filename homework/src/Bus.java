@@ -2,7 +2,7 @@ public class Bus extends Transport {
 
     private int nowPassengers;
 
-    private String alert_bus ="";
+    private String alertBus ="";
 
 //     ====================getter setter  start=================================
     public int getNowPassengers() {
@@ -13,12 +13,12 @@ public class Bus extends Transport {
         this.nowPassengers = nowPassengers;
     }
 
-    public String getAlert_bus() {
-        return alert_bus;
+    public String getAlertBus() {
+        return alertBus;
     }
 
-    public void setAlert_bus(String alert_bus) {
-        this.alert_bus = alert_bus;
+    public void setAlertBus(String alertBus) {
+        this.alertBus = alertBus;
     }
 
 
@@ -50,11 +50,11 @@ public class Bus extends Transport {
 
         if(somePass > max_pass){
 
-            this.alert_bus = "최대 승객 수 초과";
+            this.alertBus = "최대 승객 수 초과";
 
         }else {
 
-            this.alert_bus = "없음";
+            this.alertBus = "없음";
 
         }
     }
@@ -66,7 +66,7 @@ public class Bus extends Transport {
             
             super.setStatus("차고지행");
             
-            this.alert_bus ="주유 필요";
+            this.alertBus ="주유 필요";
 
         }
 

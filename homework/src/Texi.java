@@ -1,10 +1,10 @@
 public class Texi extends Transport {
 
     private String departure;
-    private int departure_distance;
-    private int departure_mindistance;
-    private int basic_distance = 1;
-    private int basic_price = 3000;
+    private int departureDistance;
+    private int departureMindistance;
+    private int basicDistance = 1;
+    private int basicPrice = 3000;
 
     private int speed = 0;
 
@@ -16,9 +16,9 @@ public class Texi extends Transport {
         this.speed = speed;
     }
 
-    private int basic_maxprice = 10000;
+    private int basicMaxprice = 10000;
 
-    private int distancePer_price = 1000;
+    private int distancePerPrice = 1000;
 
     private int amountPrice;
     // 12.출력 택시 c 누적요금계산용;
@@ -53,50 +53,50 @@ public class Texi extends Transport {
         this.departure = departure;
     }
 
-    public int getDeparture_distance() {
-        return departure_distance;
+    public int getDepartureDistance() {
+        return departureDistance;
     }
 
 
-    public int getDeparture_mindistance() {
-        return departure_mindistance;
-    }
-
-
-
-    public void setDeparture_distance(int departure_distance) {
-        this.departure_distance = departure_distance;
-    }
-
-
-    public int getBasic_distance() {
-        return basic_distance;
-    }
-
-    public void setBasic_distance(int basic_distance) {
-        this.basic_distance = basic_distance;
-    }
-
-    public int getBasic_price() {
-        return basic_price;
-    }
-
-    public int  getBasic_maxprice() {
-        return basic_maxprice;
+    public int getDepartureMindistance() {
+        return departureMindistance;
     }
 
 
 
-    public void setBasic_price(int basic_price) {
-        this.basic_price = basic_price;
+    public void setDepartureDistance(int departureDistance) {
+        this.departureDistance = departureDistance;
     }
 
-    public int getDistancePer_price() {
-        return distancePer_price;
+
+    public int getBasicDistance() {
+        return basicDistance;
     }
 
-    public void setDistancePer_price(int distancePer_price) {
-        this.distancePer_price = distancePer_price;
+    public void setBasicDistance(int basicDistance) {
+        this.basicDistance = basicDistance;
+    }
+
+    public int getBasicPrice() {
+        return basicPrice;
+    }
+
+    public int getBasicMaxprice() {
+        return basicMaxprice;
+    }
+
+
+
+    public void setBasicPrice(int basicPrice) {
+        this.basicPrice = basicPrice;
+    }
+
+    public int getDistancePerPrice() {
+        return distancePerPrice;
+    }
+
+    public void setDistancePerPrice(int distancePerPrice) {
+        this.distancePerPrice = distancePerPrice;
     }
 
     public int getAmountPrice() {
@@ -131,7 +131,7 @@ public class Texi extends Transport {
     // 요금 추가 == 총금액?????
     public int addpricePerdistance(int distance) {
 
-        return this.amountPrice = basic_price +(distancePer_price*basic_distance * distance);
+        return this.amountPrice = basicPrice +(distancePerPrice * basicDistance * distance);
 
     }
 
