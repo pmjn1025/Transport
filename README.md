@@ -3,7 +3,7 @@
 대중교통, 버스 ,택시를 이용한 자바프로그램입니다.  
 
   opp: 객체지향  
-  정리 : https://velog.io/@younghoss/OPPObject-Oriented-Programming  
+  정리 : [https://velog.io/@younghoss/OPPObject-Oriented-Programming  ](https://velog.io/@sago_mungcci/OPP%EB%9E%80)
     
   시나리오 : 버스 편  
     
